@@ -30,13 +30,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/">Home</a>
+              <a class="nav-link active" aria-current="page" href="./">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/about.html">About</a>
+              <a class="nav-link" href="./about.html">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/contact.html">Contact</a>
+              <a class="nav-link" href="./contacts.html">Contact</a>
             </li>
             <li class="nav-item dropdown">
               <a
@@ -66,13 +66,252 @@
               placeholder="Search"
               aria-label="Search"
             />
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
+            <button class="btn btn-outline-danger" type="submit">Search</button>
           </form>
+          <div class="mx-2">
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#loginModal"
+            >
+              Login
+            </button>
+            <button
+              type="button"
+              class="btn btn-success"
+              data-bs-toggle="modal"
+              data-bs-target="#signUpModal"
+            >
+              SignUp
+            </button>
+          </div>
         </div>
       </div>
     </nav>
+
+    <!-- Login Modal -->
+    <div
+      class="modal fade"
+      id="loginModal"
+      tabindex="-1"
+      aria-labelledby="loginModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="loginModalLabel">
+              Login to iCoder
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label"
+                  >Email address</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                />
+                <div id="emailHelp" class="form-text">
+                  We'll never share your email with anyone else.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label"
+                  >Password</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                />
+              </div>
+              <div class="mb-3 form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="exampleCheck1"
+                />
+                <label class="form-check-label" for="exampleCheck1"
+                  >Check me out</label
+                >
+              </div>
+              <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SignUp Modal-->
+    <div
+      class="modal fade"
+      id="signUpModal"
+      tabindex="-1"
+      aria-labelledby="signUpModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="signUpModalLabel">
+              Create your account on iCoder
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form class="row g-3">
+              <div class="col-md-4">
+                <label for="validationDefault01" class="form-label"
+                  >First name</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="validationDefault01"
+                  value="Mark"
+                  required
+                />
+              </div>
+              <div class="col-md-4">
+                <label for="validationDefault02" class="form-label"
+                  >Last name</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="validationDefault02"
+                  value="Otto"
+                  required
+                />
+              </div>
+              <div class="col-md-4">
+                <label for="validationDefaultUsername" class="form-label"
+                  >Username</label
+                >
+                <div class="input-group">
+                  <span class="input-group-text" id="inputGroupPrepend2"
+                    >@</span
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="validationDefaultUsername"
+                    aria-describedby="inputGroupPrepend2"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label for="validationDefault03" class="form-label">City</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="validationDefault03"
+                  required
+                />
+              </div>
+              <div class="col-md-3">
+                <label for="validationDefault04" class="form-label"
+                  >State</label
+                >
+                <select class="form-select" id="validationDefault04" required>
+                  <option selected disabled value="">Choose...</option>
+                  <option>Rajasthan</option>
+                  <option>Telangana</option>
+                  <option>Uttarakhand</option>
+                  <option>Madhya Pradesh</option>
+                  <option>Himachal Pradesh</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+                <label for="validationCustom05" class="form-label">Zip</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="validationCustom05"
+                  required
+                />
+                <div class="invalid-feedback">Please provide a valid zip.</div>
+              </div>
+              <div class="col-auto">
+                <label for="inputPassword6" class="col-form-label"
+                  >Password</label
+                >
+              </div>
+              <div class="col-auto">
+                <input
+                  type="password"
+                  id="inputPassword6"
+                  class="form-control"
+                  aria-describedby="passwordHelpInline"
+                />
+              </div>
+              <div class="col-auto">
+                <span id="passwordHelpInline" class="form-text">
+                  Must be 8-20 characters long.
+                </span>
+              </div>
+              <div class="row g-3">
+                <div class="col-auto">
+                  <label for="inputConfirmPassword" class="col-form-label"
+                    >Confirm Password</label
+                  >
+                </div>
+                <div class="col-auto">
+                  <input
+                    type="password"
+                    id="inputConfirmPassword"
+                    class="form-control"
+                    aria-describedby="confirmPasswordHelpInline"
+                  />
+                </div>
+              </div>
+
+              <div class="col-12">
+                <button class="btn btn-primary" type="submit">
+                  Create account
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div
       id="carouselExampleCaptions"
@@ -104,7 +343,7 @@
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img
-            src="./carousel1.png"
+            src="./Media/carousel1.png"
             class="d-block w-100 img-fluid"
             alt="..."
           />
@@ -118,7 +357,7 @@
         </div>
         <div class="carousel-item">
           <img
-            src="./carousel2.webp"
+            src="./Media/carousel2.webp"
             class="d-block w-100 img-fluid"
             alt="..."
           />
@@ -132,7 +371,7 @@
         </div>
         <div class="carousel-item">
           <img
-            src="./carousel3.png"
+            src="./Media/carousel3.png"
             class="d-block w-100 img-fluid"
             alt="..."
           />
@@ -191,7 +430,7 @@
             </div>
             <div class="col-auto d-none d-lg-block">
               <img
-                src="./thumb1.webp"
+                src="./Media/thumb1.webp"
                 alt="image"
                 class="bd-placeholder-img"
                 width="200"
@@ -224,7 +463,75 @@
             </div>
             <div class="col-auto d-none d-lg-block">
               <img
-                src="./thumb2.webp"
+                src="./Media/thumb2.webp"
+                alt="image"
+                class="bd-placeholder-img"
+                width="200"
+                height="250"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mb-2">
+        <div class="col-md-6">
+          <div
+            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+          >
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-primary-emphasis"
+                >World</strong
+              >
+              <h3 class="mb-0">Global Conferences</h3>
+              <div class="mb-1 text-body-secondary">Nov 12</div>
+              <p class="card-text mb-auto">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content.
+              </p>
+              <a
+                href="#"
+                class="icon-link gap-1 icon-link-hover stretched-link"
+              >
+                Continue reading
+                <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
+              </a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img
+                src="./Media/thumb3.webp"
+                alt="image"
+                class="bd-placeholder-img"
+                width="200"
+                height="250"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div
+            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+          >
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-success-emphasis"
+                >Design</strong
+              >
+              <h3 class="mb-0">Learn Desinging</h3>
+              <div class="mb-1 text-body-secondary">Nov 11</div>
+              <p class="mb-auto">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content.
+              </p>
+              <a
+                href="#"
+                class="icon-link gap-1 icon-link-hover stretched-link"
+              >
+                Continue reading
+                <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
+              </a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img
+                src="./Media/thumb4.webp"
                 alt="image"
                 class="bd-placeholder-img"
                 width="200"
@@ -235,6 +542,95 @@
         </div>
       </div>
     </div>
+
+    <footer class="pt-4 my-md-5 pt-md-5 border-top mx-3">
+      <div class="row">
+        <div class="col-12 col-md">
+          <small class="d-block mb-3 text-body-secondary">© 2017–2024</small>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Features</h5>
+          <ul class="list-unstyled text-small">
+            <li class="mb-1">
+              <a class="link-secondary text-decoration-none" href="#"
+                >Cool stuff</a
+              >
+            </li>
+            <li class="mb-1">
+              <a class="link-secondary text-decoration-none" href="#"
+                >Random feature</a
+              >
+            </li>
+            <li class="mb-1">
+              <a class="link-secondary text-decoration-none" href="#"
+                >Team feature</a
+              >
+            </li>
+            <li class="mb-1">
+              <a class="link-secondary text-decoration-none" href="#"
+                >Stuff for developers</a
+              >
+            </li>
+            <li class="mb-1">
+              <a class="link-secondary text-decoration-none" href="#"
+                >Another one</a
+              >
+            </li>
+            <li class="mb-1">
+              <a class="link-secondary text-decoration-none" href="#"
+                >Last time</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Resources</h5>
+          <ul class="list-unstyled text-small">
+            <li class="mb-1">
+              <a class="link-secondary text-decoration-none" href="#"
+                >Resource</a
+              >
+            </li>
+            <li class="mb-1">
+              <a class="link-secondary text-decoration-none" href="#"
+                >Resource name</a
+              >
+            </li>
+            <li class="mb-1">
+              <a class="link-secondary text-decoration-none" href="#"
+                >Another resource</a
+              >
+            </li>
+            <li class="mb-1">
+              <a class="link-secondary text-decoration-none" href="#"
+                >Final resource</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>About</h5>
+          <ul class="list-unstyled text-small">
+            <li class="mb-1">
+              <a class="link-secondary text-decoration-none" href="#">Team</a>
+            </li>
+            <li class="mb-1">
+              <a class="link-secondary text-decoration-none" href="#"
+                >Locations</a
+              >
+            </li>
+            <li class="mb-1">
+              <a class="link-secondary text-decoration-none" href="#"
+                >Privacy</a
+              >
+            </li>
+            <li class="mb-1">
+              <a class="link-secondary text-decoration-none" href="#">Terms</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
