@@ -8,6 +8,6 @@
 }
 @media (max-width: 768px) {
   .carousel-item {
-    height: 50vh;
+    height: 40vh;
   }
 }
